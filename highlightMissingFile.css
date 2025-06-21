@@ -1,0 +1,115 @@
+:root {
+  --error-color: #e74c3c;
+  --error-color-rgb: 231,76,60;
+  --error-color-light: rgba(var(--error-color-rgb), 0.05);
+  --error-color-hover: rgba(var(--error-color-rgb), 0.1);
+  --error-border-hover: #c0392b;
+  --error-shadow-start: rgba(var(--error-color-rgb), 0.4);
+  --error-shadow-mid: rgba(var(--error-color-rgb), 0.2);
+}
+
+.highlight-missing-file {
+  position: relative;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 2px dashed var(--error-color);
+  background-color: var(--error-color-light);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-animation: pulse-highlight 1.5s ease-in-out infinite;
+  -moz-animation: pulse-highlight 1.5s ease-in-out infinite;
+  animation: pulse-highlight 1.5s ease-in-out infinite;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.highlight-missing-file:hover {
+  background-color: var(--error-color-hover);
+  border-color: var(--error-border-hover);
+}
+
+.highlight-missing-file .file-name {
+  display: inline-block;
+  color: var(--error-color);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.highlight-missing-file .notice-icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill%3D%22%23e74c3c%22%20d%3D%22M8%200a8%208%200%20100%2016A8%208%200%20008%200zm.93%2011.412v.588H7.07v-.588h1.86zm0-7.824v5.176H7.07V3.588h1.86z%22/%3E%3C/svg%3E") no-repeat center/contain;
+  vertical-align: middle;
+}
+
+@-webkit-keyframes pulse-highlight {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--error-shadow-start);
+            box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+            box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 var(--error-shadow-start);
+            box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+}
+
+@-moz-keyframes pulse-highlight {
+  0% {
+    -moz-box-shadow: 0 0 0 0 var(--error-shadow-start);
+         box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+  50% {
+    -moz-box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+         box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 var(--error-shadow-start);
+         box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+}
+
+@keyframes pulse-highlight {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--error-shadow-start);
+            box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+            box-shadow: 0 0 0.5rem 0.5rem var(--error-shadow-mid);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 var(--error-shadow-start);
+            box-shadow: 0 0 0 0 var(--error-shadow-start);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .highlight-missing-file,
+  .highlight-missing-file:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlight-missing-file {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
