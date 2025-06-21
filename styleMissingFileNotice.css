@@ -1,0 +1,101 @@
+/* styleMissingFileNotice.css
+ * Styles for Missing File Notice in AIFormPro WordPress Plugin
+ */
+
+.ai-form-missing-file-notice {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #aa0000;
+  background-color: #fde7e7;
+  color: #800000;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ai-form-missing-file-notice__icon {
+  flex: 0 0 auto;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #aa0000;
+}
+
+.ai-form-missing-file-notice__content {
+  flex: 1 1 auto;
+}
+
+.ai-form-missing-file-notice__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.ai-form-missing-file-notice__message {
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.ai-form-missing-file-notice__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ai-form-missing-file-notice__actions .button,
+.ai-form-missing-file-notice__actions .ai-form-btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border: 1px solid #aa0000;
+  border-radius: 0.1875rem;
+  background-color: #aa0000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ai-form-missing-file-notice__actions .button:hover,
+.ai-form-missing-file-notice__actions .ai-form-btn:hover {
+  background-color: #800000;
+  border-color: #800000;
+}
+
+.ai-form-missing-file-notice__code {
+  display: block;
+  background-color: #fff4f4;
+  border: 1px solid #fcc;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.8125rem;
+  color: #800000;
+  border-radius: 0.1875rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 37.5em) {
+  .ai-form-missing-file-notice {
+    flex-direction: column;
+  }
+  .ai-form-missing-file-notice__icon {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+  .ai-form-missing-file-notice__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ai-form-missing-file-notice__actions .button,
+  .ai-form-missing-file-notice__actions .ai-form-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
